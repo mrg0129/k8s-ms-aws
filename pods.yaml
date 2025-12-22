@@ -21,23 +21,6 @@ spec:
 apiVersion: v1
 kind: Pod
 metadata:
-  name: mysql
-  labels:
-    app: mysql
-spec:
-  containers:
-   - name: mysql
-     image: mysql:5
-     env:
-      # use secrets in production
-      - name: MYSQL_ROOT_PASSWORD
-        value: password
-      - name: MYSQL_DATABASE
-        value: fleetman
----
-apiVersion: v1
-kind: Pod
-metadata:
   name: queue
   labels:
     app: queue

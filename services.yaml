@@ -16,19 +16,6 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: database
-spec:
-  #This service routes traffic to pods with the label app=mysql
-  #The service becomes a network endpoint for either internal(other services) or external access (eg browser)
-  selector:
-    app: mysql
-  ports:
-    - port: 3306
-  type: ClusterIP
----
-apiVersion: v1
-kind: Service
-metadata:
   name: fleetman-queue
 spec:
   #This service routes traffic to pods with the label app=queue
