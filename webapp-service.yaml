@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: fleetman-webapp
+spec:
+  #This service routes traffic to pods with the label app=webapp
+  #The service becomes a network endpoint for either internal(other services) or external access (eg browser)
+  selector:
+    app: webapp
+  ports:
+    - protocol: TCP
+      port: 80
+      nodePort: 30080
+  type: NodePort
