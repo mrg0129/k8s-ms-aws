@@ -7,6 +7,7 @@ spec:
   #The service becomes a network endpoint for either internal(other services) or external access (eg browser)
   selector:
     app: webapp
+    release: "0-5"
   ports:
     - protocol: TCP
       port: 80
